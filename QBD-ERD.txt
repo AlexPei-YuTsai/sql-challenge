@@ -25,7 +25,7 @@ Employees
 emp_no PK INTEGER FK - Salaries.emp_no
 # Each Employee only has one Salary
 emp_title_id VARCHAR FK >- Titles.title_id
-# Each Employee only has one Title
+# Many Employees can share a single Title
 birth_date DATE
 first_name VARCHAR
 last_name VARCHAR
