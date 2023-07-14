@@ -1,0 +1,43 @@
+# Comments below explain any Foreign Key relations
+Departments
+-----
+dept_no PK VARCHAR
+dept_name VARCHAR
+
+# Describes what Employees are in what Departments
+Dept_Emp
+-----
+emp_no PK INTEGER FK >-< Employees.emp_no
+# Each Employee can belong to more than one Department
+# e.g.: Employee 109996 works for both Department d007 and d009
+dept_no PK VARCHAR FK >-< Departments.dept_no
+# As a result, one Employee can have many Managers and many Employees can be overseen by a single Manager at the same time
+
+# Describes what Departments have what Managers
+Dept_Manager
+-----
+dept_no VARCHAR FK >- Departments.dept_no
+# Many Managers can run the same Department
+emp_no INTEGER PK
+
+Employees
+-----
+emp_no PK INTEGER FK - Salaries.emp_no
+# Each Employee only has one Salary
+emp_title_id VARCHAR FK >- Titles.title_id
+# Each Employee only has one Title
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+sex VARCHAR
+hire_date DATE
+
+Salaries
+-----
+emp_no PK INTEGER
+salary INTEGER
+
+Titles
+-----
+title_id PK VARCHAR
+title VARCHAR
