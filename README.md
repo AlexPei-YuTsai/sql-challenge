@@ -14,6 +14,8 @@
 ## Resources that helped a lot
 AH:
 - AH
+- https://stackoverflow.com/a/29494990 <- Apparently pgAdmin/PostgreSQL has different syntax from SQL so I can't just use YEAR() like other people normally would. https://www.postgresql.org/docs/current/functions-datetime.html official documentation here
+- string functions https://www.postgresql.org/docs/9.1/functions-string.html
 ## Random Thoughts
 > Project completed on June 22, 2023
 - AH
